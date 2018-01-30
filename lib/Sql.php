@@ -1,9 +1,10 @@
 <?php
-$username = "root";
-$servername = "localhost";
-$password = "12345678";
-$dbname = "novelism";
+$username = "azure";
+$servername = "127.0.0.1:56286";
+$password = "6#vWHD_$";
+$dbname = "localdb";
 $conn = new mysqli($servername, $username, $password, $dbname);
+mysqli_set_charset($conn, "utf8");
 switch ($_GET['f']) {
     case login:
         login($_GET['data'],$_GET['data2']);

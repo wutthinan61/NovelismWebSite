@@ -1,8 +1,9 @@
 <?php require_once('import/head.php'); ?>
 
 <?php
-$objConnect = mysql_connect("localhost","root","12345678") or die("Error Connect to Database");
-$objDB = mysql_select_db("novelism");
+$objConnect = mysql_connect("127.0.0.1:56286","azure","6#vWHD_$") or die("Error Connect to Database");
+$objDB = mysql_select_db("localdb");
+mysql_query("SET NAMES UTF8");
 $strSQL = "SELECT * FROM novel";
 $objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 $Num_Rows = mysql_num_rows($objQuery);

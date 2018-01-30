@@ -7,8 +7,9 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
 session_start();
-$objConnect = mysql_connect("localhost","root","12345678") or die("Error Connect to Database");
-$objDB = mysql_select_db("novelism");
+$objConnect = mysql_connect("127.0.0.1:56286","azure","6#vWHD_$") or die("Error Connect to Database");
+$objDB = mysql_select_db("localdb");
+mysql_query("SET NAMES UTF8");
 $strSQL = "SELECT * FROM novel where noID='".$_GET['noID']."'";
 $objQuery  = mysql_query($strSQL);
 while($objResult = mysql_fetch_array($objQuery)){ ?>
